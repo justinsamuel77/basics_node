@@ -1,12 +1,10 @@
 import express from 'express';
-import { MoviesIndex } from '../controllers/movies.controllers.js';
+import { MoviesCreate, MoviesIndex } from '../controllers/movies.controllers.js';
 const router = express.Router();
 
 router.get("/", MoviesIndex);
 
-router.post("/", () => {
-
-});
+router.post("/", MoviesCreate);
 
 router.put("/:id", () => {
 
